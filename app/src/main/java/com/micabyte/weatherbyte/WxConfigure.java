@@ -33,14 +33,7 @@ public class WxConfigure extends Activity implements View.OnClickListener {
         WxRequestThread requestThread = new WxRequestThread(this);
         requestThread.add(widgetId);
         requestThread.start();
-        /*
-        if(WxRequest.getWeather(weather))
-        {
-            Storage.storeWeatherInfo(this, weather, widgetId);
-            final RemoteViews views = WxWidgetProvider.getWeatherView(this, widgetId, weather);
-            final AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(this);
-            appWidgetManager.updateAppWidget(widgetId,views);
-        // Result */
+        // Result
         Intent result = new Intent();
         result.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, widgetId);
         setResult(RESULT_OK,result);
