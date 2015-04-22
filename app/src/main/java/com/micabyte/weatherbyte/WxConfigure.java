@@ -5,7 +5,6 @@ import android.appwidget.AppWidgetManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.RemoteViews;
 
 public class WxConfigure extends Activity implements View.OnClickListener {
     private int widgetId= AppWidgetManager.INVALID_APPWIDGET_ID;
@@ -29,7 +28,7 @@ public class WxConfigure extends Activity implements View.OnClickListener {
 
     public void onClick(View view)
     {
-        WxInfo weather = new WxInfo("KS18700");
+        WxInfo weather = new WxInfo();
         Storage.storeWeatherInfo(this, weather, widgetId);
         WxRequestThread requestThread = new WxRequestThread(this);
         requestThread.add(widgetId);

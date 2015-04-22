@@ -7,24 +7,14 @@ public class WxInfo implements Parcelable
 {
     private static final byte VERSION = 1;
     public int icon;
-    public String locationId;
+    private String locationId;
     public String location;
     public double temp;
-
-    public String humidity;
-    public String wind;
-    public String condition;
     public long date;
 
     public WxInfo()
     {
         super();
-    }
-
-    public WxInfo(String cityName)
-    {
-        super();
-        locationId = cityName;
     }
 
     public int describeContents()

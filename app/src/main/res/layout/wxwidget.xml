@@ -6,8 +6,8 @@
     android:padding="@dimen/widget_margin">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
         <RelativeLayout android:id="@+id/time_container"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
@@ -16,7 +16,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4dp"
                 android:textColor="#ffffff"
-                android:textSize="42sp"
+                android:textSize="48sp"
                 android:shadowDx="1"
                 android:shadowDy="1"
                 android:shadowRadius="2"
@@ -28,7 +28,7 @@
                 android:layout_marginLeft="4dp"
                 android:layout_marginTop="48sp"
                 android:textColor="#ffffff"
-                android:textSize="13sp"
+                android:textSize="14sp"
                 android:shadowDx="1"
                 android:shadowDy="1"
                 android:shadowRadius="1"
@@ -39,14 +39,14 @@
                 android:layout_marginLeft="4dp"
                 android:layout_below="@id/day_of_week"
                 android:textColor="#ffffff"
-                android:textSize="11sp"
+                android:textSize="14sp"
                 android:shadowDx="1"
                 android:shadowDy="1"
                 android:shadowRadius="1"
                 android:shadowColor="#000000"/>
         </RelativeLayout>
         <ImageView android:layout_width="1dp"
-            android:layout_height="fill_parent"
+            android:layout_height="76dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginTop="10dp"
@@ -60,7 +60,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#ffffff"
-                android:textSize="14sp"
+                android:textSize="20sp"
                 android:shadowDx="1"
                 android:shadowDy="1"
                 android:shadowRadius="2"
@@ -81,13 +81,14 @@
                 android:layout_toRightOf="@id/weather_icon"
                 android:layout_below="@id/location"
                 android:textColor="#ffffff"
-                android:textSize="36sp"
+                android:textSize="40sp"
                 android:shadowDx="1"
                 android:shadowDy="1"
                 android:shadowRadius="2"
                 android:shadowColor="#000000"
                 android:singleLine="true"
-                android:text="N/A"/>
+                android:text="N/A"
+                android:textIsSelectable="false" />
         </RelativeLayout>
     </LinearLayout>
 </FrameLayout>

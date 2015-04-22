@@ -6,10 +6,10 @@ import android.util.Log;
 
 import java.util.ArrayList;
 
-public class WxRequestThread extends Thread {
+class WxRequestThread extends Thread {
     private static final String TAG = WxRequestThread.class.getName();
     private final Context context;
-    private final ArrayList<Integer> widgets = new ArrayList<Integer>();
+    private final ArrayList<Integer> widgets = new ArrayList<>();
     private PowerManager.WakeLock wakeLock;
 
     public WxRequestThread(Context context) {

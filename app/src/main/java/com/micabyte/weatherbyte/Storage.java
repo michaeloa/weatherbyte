@@ -10,7 +10,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class Storage {
+class Storage {
     private final static String TAG = Storage.class.getName();
 
     public static boolean storeWeatherInfo(Context context, WxInfo info, int widgetId)
@@ -49,7 +49,6 @@ public class Storage {
         {
             parcel.recycle();
         }
-
         return true;
     }
 
@@ -58,9 +57,7 @@ public class Storage {
         final Parcel parcel = Parcel.obtain();
         final byte data[];
         final FileInputStream input;
-        final StringBuilder path = new StringBuilder(context.getFilesDir().getAbsoluteFile().toString());
-        path.append("/").append(String.valueOf(widgetId));
-        final File file = new File(path.toString());
+        final File file = new File(context.getFilesDir().getAbsoluteFile().toString() + "/" + String.valueOf(widgetId));
         try
         {
             input = new FileInputStream(file.toString());
@@ -98,9 +95,8 @@ public class Storage {
 
     public static boolean deleteWeatherInfo(Context context, int widgetId)
     {
-        final StringBuilder path = new StringBuilder(context.getFilesDir().getAbsoluteFile().toString());
-        path.append("/").append(String.valueOf(widgetId));
-        final File file = new File(path.toString());
+        final File file = new File(context.getFilesDir().getAbsoluteFile().toString() + "/" + String.valueOf(widgetId));
         return !file.exists() || file.delete();
     }
+
 }

@@ -20,7 +20,7 @@ public class WxWidgetProvider extends AppWidgetProvider {
     private static final int    INTERVAL = 1000;
     private static final int    REQUEST_INTERVAL = 60*60*1000;
 
-    public static int getMonthName(int month)
+    private static int getMonthName(int month)
     {
         switch(month)
         {
@@ -43,7 +43,7 @@ public class WxWidgetProvider extends AppWidgetProvider {
         return 0;
     }
 
-    public static int getDayOfWeek(int dayOfWeek)
+    private static int getDayOfWeek(int dayOfWeek)
     {
         switch(dayOfWeek)
         {
@@ -65,7 +65,7 @@ public class WxWidgetProvider extends AppWidgetProvider {
         return 0;
     }
 
-    public static int getWeatherIcon(int icon)
+    private static int getWeatherIcon(int icon)
     {
         final Calendar calendar = Calendar.getInstance();
         final int hours = calendar.get(Calendar.HOUR_OF_DAY);
@@ -91,7 +91,7 @@ public class WxWidgetProvider extends AppWidgetProvider {
         return icon;
     }
 
-    public static RemoteViews getWeatherView(Context context, int widgetId, WxInfo info)
+    private static RemoteViews getWeatherView(Context context, int widgetId, WxInfo info)
     {
         if (info==null) {
             Log.d(TAG, "Null info");
@@ -196,8 +196,8 @@ public class WxWidgetProvider extends AppWidgetProvider {
         WxRequestThread requestThread = null;
         for(int index=0, count = appWidgetIds.length; index<count; index++)
         {
-            final WxInfo info = Storage.restoreWeatherInfo(context, appWidgetIds[index]);
-            if(info==null)
+            WxInfo info = Storage.restoreWeatherInfo(context, appWidgetIds[index]);
+            if (info == null)
                 continue;
             if(System.currentTimeMillis() - info.date>REQUEST_INTERVAL)
             {
@@ -207,7 +207,7 @@ public class WxWidgetProvider extends AppWidgetProvider {
             }
             final RemoteViews views = getWeatherView(context, appWidgetIds[index],info);
             if(views!=null)
-                appWidgetManager.updateAppWidget(appWidgetIds[index],views);
+                appWidgetManager.updateAppWidget(appWidgetIds[index], views);
         }
         if(requestThread!=null)
             requestThread.start();
