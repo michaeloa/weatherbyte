@@ -9,11 +9,25 @@
         <dex dex="/disk1/MicaByte/WeatherByte/app/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-5241afd4eaf1839204c248585c564238e0947a47.jar" />
     </item>
     <item
-        jar="/disk1/Apps/android-sdk-linux/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
+        jar="/disk1/MicaByte/WeatherByte/app/libs/jackson-databind-2.4.2.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
-        <dex dex="/disk1/MicaByte/WeatherByte/app/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-900accc416f4cb806c3187f5f3cdbc0c12f4c658.jar" />
+        sha1="8e31266a272ad25ac4c089734d93e8d811652c1f">
+        <dex dex="/disk1/MicaByte/WeatherByte/app/build/intermediates/pre-dexed/debug/jackson-databind-2.4.2-62734319ec4cf1477dc5e24fc48ad1388b40c669.jar" />
+    </item>
+    <item
+        jar="/disk1/MicaByte/WeatherByte/app/libs/jackson-annotations-2.4.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="6bb52af09372d5064206d47d7887d41671f00f7d">
+        <dex dex="/disk1/MicaByte/WeatherByte/app/build/intermediates/pre-dexed/debug/jackson-annotations-2.4.2-fb460a4d606013624b5d2fdb342d3f384eeba9ca.jar" />
+    </item>
+    <item
+        jar="/disk1/MicaByte/WeatherByte/app/libs/jackson-core-2.4.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ceb72830d95c512b4b300a38f29febc85bdf6e4b">
+        <dex dex="/disk1/MicaByte/WeatherByte/app/build/intermediates/pre-dexed/debug/jackson-core-2.4.2-68794dbe2ad171b5aadbd580408b291a75a01993.jar" />
     </item>
     <item
         jar="/disk1/MicaByte/WeatherByte/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/classes.jar"
@@ -21,6 +35,13 @@
         revision="21.1.2"
         sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
         <dex dex="/disk1/MicaByte/WeatherByte/app/build/intermediates/pre-dexed/debug/classes-f69f1da5bf516809a39b9a4e91c981577278bf52.jar" />
+    </item>
+    <item
+        jar="/disk1/Apps/android-sdk-linux/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="/disk1/MicaByte/WeatherByte/app/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-900accc416f4cb806c3187f5f3cdbc0c12f4c658.jar" />
     </item>
     <item
         jar="/disk1/MicaByte/WeatherByte/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/libs/internal_impl-22.0.0.jar"
