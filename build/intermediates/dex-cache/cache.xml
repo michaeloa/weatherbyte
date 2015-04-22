@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/disk1/MicaByte/WeatherByte/app/build/intermediates/exploded-aar/com.android.support/support-v13/22.0.0/libs/internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="def3eff2b7b4774d96ae15b07b3fc0111edbfe24">
+        <dex dex="/disk1/MicaByte/WeatherByte/app/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-5241afd4eaf1839204c248585c564238e0947a47.jar" />
+    </item>
+    <item
+        jar="/disk1/Apps/android-sdk-linux/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="/disk1/MicaByte/WeatherByte/app/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-900accc416f4cb806c3187f5f3cdbc0c12f4c658.jar" />
+    </item>
+    <item
+        jar="/disk1/MicaByte/WeatherByte/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="/disk1/MicaByte/WeatherByte/app/build/intermediates/pre-dexed/debug/classes-f69f1da5bf516809a39b9a4e91c981577278bf52.jar" />
+    </item>
+    <item
+        jar="/disk1/MicaByte/WeatherByte/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/libs/internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="/disk1/MicaByte/WeatherByte/app/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-f5947077558445679177b4f64e79c11bcdac1e2f.jar" />
+    </item>
+    <item
+        jar="/disk1/MicaByte/WeatherByte/app/build/intermediates/exploded-aar/com.android.support/support-v13/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="7f9cca1caa023a880b00c382bcc5c90245ae4895">
+        <dex dex="/disk1/MicaByte/WeatherByte/app/build/intermediates/pre-dexed/debug/classes-e9b65f6fb5613a6e7be0a9d46e81f380a721f99a.jar" />
+    </item>
+
+</items>

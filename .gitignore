@@ -1,7 +1,11 @@
-.gradle
-/local.properties
-/.idea/workspace.xml
-/.idea/libraries
-.DS_Store
-/build
-/captures
+.#built application files
+ *.apk
+
+ # Local configuration file (sdk path, etc)
+ local.properties
+
+ # Android Studio
+ .idea/libraries/
+ .idea/workspace.xml
+ .gradle
+ build/
