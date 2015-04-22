@@ -21,23 +21,43 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 
+import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 /**
  * Created by michaeloa on 4/22/15.
  */
 public class WxWidgetProvider extends AppWidgetProvider {
+    public static String TAG = WxWidgetProvider.class.getName();
 
+    static void updateAppWidget(Context context, AppWidgetManager appWidgetManager, int appWidgetId) {
+        Log.d(TAG, "updateAppWidget appWidgetId=" + appWidgetId);
+        // Construct
+        RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.wxwidget);
+        String base_uri = "https://data.met.no/v0/points?sources=KS18700";
+        //String stationId = MainActivity.loadTitlePref(getApplicationContext(), "stationId");
+        //Log.d("WxWidgetProvider", "updateAppWidget StationId=" + stationId);
+        String result = UpdateService.GET(base_uri);
+        Log.d("WxWidgetProvider", "updateAppWidget Result=" + result);
+        // Build an update that holds the updated widget contents
+        views = new RemoteViews(context.getPackageName(), R.layout.wxwidget);
+        views.setTextViewText(R.id.WxValue, Integer.toString(1));
+
+        appWidgetManager.updateAppWidget(appWidgetId, views);
+    }
 
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
         Log.d("WxWidget.UpdateService", "onUpdate()");
         // To prevent any ANR timeouts, we perform the update in a service
         context.startService(new Intent(context, UpdateService.class));
-        /*
+        /*App
         final int N = appWidgetIds.length;
         // Loop over the widgets that belong to this provider
         for (int i=0; i<N; i++) {
@@ -107,23 +127,30 @@ public class WxWidgetProvider extends AppWidgetProvider {
             return views;
         }
 
-        public static String GET(String url){
-            InputStream inputStream = null;
-            String result = "";
+        public static String GET(String uri){
+            URL url = null;
             try {
-                // create HttpClient
-                HttpClient httpclient = new DefaultHttpClient();
-                // make GET request to the given URL
-                HttpResponse httpResponse = httpclient.execute(new HttpGet(url));
-                // receive response as inputStream
-                inputStream = httpResponse.getEntity().getContent();
-                // convert inputstream to string
-                if(inputStream != null)
-                    result = convertInputStreamToString(inputStream);
-                else
-                    result = "Did not work!";
-            } catch (Exception e) {
-                Log.d("InputStream", e.getLocalizedMessage());
+                url = new URL(uri);
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            }
+            HttpURLConnection urlConnection = null;
+            try {
+                urlConnection = (HttpURLConnection) url.openConnection();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            String result = "Data Retrieval Error";
+            try {
+                InputStream in = new BufferedInputStream(urlConnection.getInputStream());
+                if(in != null)
+                    result = convertInputStreamToString(in);
+            }
+            catch (Exception e) {
+                e.printStackTrace();
+            }
+            finally {
+                urlConnection.disconnect();
             }
             return result;
         }

@@ -50,7 +50,8 @@ public class MainActivity extends Activity {
             saveTitlePref(context, "stationId", stationId);
             // Push widget update to surface with newly set prefix
             AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
-            //WxWidgetProvider.updateAppWidget(context, appWidgetManager, appWidgetId);
+            WxWidgetProvider.updateAppWidget(context, appWidgetManager, appWidgetId);
+
 
             // Make sure we pass back the original appWidgetId
             Intent resultValue = new Intent();
