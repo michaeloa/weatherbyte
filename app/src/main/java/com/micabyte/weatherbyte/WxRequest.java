@@ -16,8 +16,7 @@ import java.net.URLConnection;
 class WxRequest {
     private final static String TAG = WxRequest.class.getName();
     private static int locN = 0;
-    private final static String locations[] = { "KS18700", "KS18800" };
-    // "KS18701","KS18703","KS18703",
+    private final static String locations[] = { "KS18700", "KS18701","KS18703","KS18703", "KS18800" };
     private final static int icons[] = { R.drawable.ic_mostly_sunny, R.drawable.ic_cloudy, R.drawable.ic_rain };
     private final static String uri = "https://data.met.no:443/v0/points?sources=";
 
